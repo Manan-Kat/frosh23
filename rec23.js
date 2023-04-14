@@ -26,11 +26,11 @@ function submitForm(e) {
     var Branch = getElementVal("branch");
     var cg = getElementVal("cgpa");
     var Hostel = getElementVal("hostel");
-    var ratingleadership = getElementVal("leadership");
-    var ratingteamwork = getElementVal("teamwork");
+    var ratingadaptability = getElementVal("leadership");
+    var ratingresilience = getElementVal("teamwork");
     var ratingcreativity = getElementVal("creativity");
-    var ratingspontaneity = getElementVal("spontaneity");
-    var ratingpatience = getElementVal("patience");
+    var ratingtimeManagement = getElementVal("spontaneity");
+    var ratingdecisiveness = getElementVal("patience");
     var q1 = getElementVal("q1");
     var q2 = getElementVal("q2");
     var q3 = getElementVal("q3");
@@ -41,7 +41,7 @@ function submitForm(e) {
     var q8 = getElementVal("q8");
     var talentSubmission = getElementVal("talentSubmission");
 
-    saveMessages(name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, ratingleadership, ratingteamwork, ratingcreativity, ratingspontaneity, ratingpatience, q1, q2, q3, q4, q5, q6, q7, q8, talentSubmission);
+    saveMessages(name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, ratingadaptability, ratingresilience, ratingcreativity, ratingtimeManagement, ratingdecisiveness, q1, q2, q3, q4, q5, q6, q7, q8, talentSubmission);
 
     //   enable alert
     document.querySelector(".alert").style.display = "block";
@@ -55,7 +55,7 @@ function submitForm(e) {
     document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, rating_adaptability, rating_resilience, rating_creativity, rating_timeManagement, rating_decisiveness, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, talentSubmission) => {
+const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, ratingadaptability, ratingresilience, ratingcreativity, ratingtimeManagement, ratingdecisiveness, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, talentSubmission) => {
     var newContactForm = contactFormDB.push();
 
     newContactForm.set({
@@ -66,11 +66,11 @@ const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel,
         Branch: Branch,
         cg: cg,
         Hostel: Hostel,
-        adaptability: rating_adaptability,
-        resilience: rating_resilience,
-        creativity: rating_creativity,
-        timeManagement: rating_timeManagement,
-        decisiveness: rating_decisiveness,
+        ratingadaptability: ratingadaptability,
+        ratingresilience: ratingresilience,
+        ratingcreativity: ratingcreativity,
+        ratingtimeManagement: ratingtimeManagement,
+        ratingdecisiveness: ratingdecisiveness,
         q1: Question1,
         q2: Question2,
         q3: Question3,
