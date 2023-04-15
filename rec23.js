@@ -26,11 +26,11 @@ function submitForm(e) {
     var Branch = getElementVal("branch");
     var cg = getElementVal("cgpa");
     var Hostel = getElementVal("hostel");
-    var ratingadaptability = getElementVal("leadership");
-    var ratingresilience = getElementVal("teamwork");
-    var ratingcreativity = getElementVal("creativity");
-    var ratingtimeManagement = getElementVal("spontaneity");
-    var ratingdecisiveness = getElementVal("patience");
+    var ratingadaptability = getElementVal1("leadership");
+    var ratingresilience = getElementVal1("teamwork");
+    var ratingcreativity = getElementVal1("creativity");
+    var ratingtimeManagement = getElementVal1("spontaneity");
+    var ratingdecisiveness = getElementVal1("patience");
     var q1 = getElementVal("q1");
     var q2 = getElementVal("q2");
     var q3 = getElementVal("q3");
@@ -40,6 +40,14 @@ function submitForm(e) {
     var q7 = getElementVal("q7");
     var q8 = getElementVal("q8");
     var talentSubmission = getElementVal("talentSubmission");
+
+    // console.log(ratingadaptability);
+    // console.log(ratingresilience);
+    // console.log(ratingcreativity);
+    // console.log(ratingtimeManagement);
+    // console.log(ratingdecisiveness);
+    
+
 
     saveMessages(name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, ratingadaptability, ratingresilience, ratingcreativity, ratingtimeManagement, ratingdecisiveness, q1, q2, q3, q4, q5, q6, q7, q8, talentSubmission);
 
@@ -55,7 +63,7 @@ function submitForm(e) {
     document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, ratingadaptability, ratingresilience, ratingcreativity, ratingtimeManagement, ratingdecisiveness, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, talentSubmission) => {
+const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, rating_adaptability, rating_resilience, rating_creativity, rating_timeManagement, rating_decisiveness, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, talentSubmission) => {
     var newContactForm = contactFormDB.push();
 
     newContactForm.set({
@@ -66,11 +74,11 @@ const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel,
         Branch: Branch,
         cg: cg,
         Hostel: Hostel,
-        ratingadaptability: ratingadaptability,
-        ratingresilience: ratingresilience,
-        ratingcreativity: ratingcreativity,
-        ratingtimeManagement: ratingtimeManagement,
-        ratingdecisiveness: ratingdecisiveness,
+        ratingadaptability: rating_adaptability,
+        ratingresilience: rating_resilience,
+        ratingcreativity: rating_creativity,
+        ratingtimeManagement: rating_timeManagement,
+        ratingdecisiveness: rating_decisiveness,
         q1: Question1,
         q2: Question2,
         q3: Question3,
@@ -87,3 +95,14 @@ const saveMessages = (name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel,
 const getElementVal = (id) => {
     return document.getElementById(id).value;
 };
+
+function getElementVal1(name) {
+    var elements = document.getElementsByName(name);
+    for (var i = 0; i < elements.length; i++) {
+      if (elements[i].checked) {
+        return elements[i].value;
+      }
+    }
+    return null;
+  }
+  
