@@ -41,11 +41,11 @@ function submitForm(e) {
     var q8 = getElementVal("q8");
     var talentSubmission = getElementVal("talentSubmission");
 
-    // console.log(ratingadaptability);
-    // console.log(ratingresilience);
-    // console.log(ratingcreativity);
-    // console.log(ratingtimeManagement);
-    // console.log(ratingdecisiveness);
+    console.log(ratingadaptability);
+    console.log(ratingresilience);
+    console.log(ratingcreativity);
+    console.log(ratingtimeManagement);
+    console.log(ratingdecisiveness);
     
 
 
