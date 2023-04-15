@@ -104,5 +104,5 @@ function getElementVal1(name) {
       }
     }
     return null;
-  }
+  };
   
