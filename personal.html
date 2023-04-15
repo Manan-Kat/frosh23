@@ -249,13 +249,13 @@
                     <button id="show-button-2" onclick=" toggleContent(2)" class="startlink">NO</button>
                 </div>
                 <div class="formentry" id="talent" style="display:none;">
-                    <label for="" id="textefft">Paste Google Drive link here</label>
+                    <label for="" id="textefft">Paste Google Drive link here(make sure that it is public)</label><br>
                     <input type="text" name="" id="talentSubmission"></input>
                     <br>
-                    <button type="submit" class="startlink" id="talentbutton">SUBMIT</button>
+                    <button type="submit" class="startlink" id="talentbutton" onclick="resetPage()">SUBMIT</button>
                 </div>
                 <div style="display:none;" id="notalent">
-                    <button type="submit" class="startlink">SUBMIT</button>
+                    <button type="submit" class="startlink" onclick="redirectToPage()">SUBMIT</button>
                 </div>
                 <div class="alert">Your form was submitted!</div>
             </div>
@@ -290,6 +290,10 @@
             event.preventDefault();
             // alert("Are you sure ?");
         });
+        function redirectToPage() {
+            window.location.href = "./thanku.html";
+        }
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="./rec23.js"></script>
