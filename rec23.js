@@ -41,14 +41,6 @@ function submitForm(e) {
     var q8 = getElementVal("q8");
     var talentSubmission = getElementVal("talentSubmission");
 
-    console.log(ratingadaptability);
-    console.log(ratingresilience);
-    console.log(ratingcreativity);
-    console.log(ratingtimeManagement);
-    console.log(ratingdecisiveness);
-    
-
-
     saveMessages(name, email_id, Roll_No, Phone_Number, Branch, cg, Hostel, ratingadaptability, ratingresilience, ratingcreativity, ratingtimeManagement, ratingdecisiveness, q1, q2, q3, q4, q5, q6, q7, q8, talentSubmission);
 
     //   enable alert

@@ -61,7 +61,7 @@ h2 {
     font-weight: 800;
     /* font-family: 'Quicksand', sans-serif; */
     font-family: 'Barlow', sans-serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.5rem;
     /* font-family: 'Cabin', sans-serif; */
     /* font-family: 'Overpass', sans-serif; */
@@ -416,4 +416,14 @@ h3 {
 .chkmt{
     font-family: 'Cormorant Garamond', serif;
     display: block;
+    letter-spacing: -.0025em;
+    color: #cfcfcf;
+}
+
+.k{
+    color: #b70000;
+}
+
+.formentryquestions div{
+    min-height: 30vh;
 }
